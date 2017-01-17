@@ -1,4 +1,5 @@
 from obspy import read
+from obspy.core import UTCDateTime
 
 
 
@@ -22,4 +23,8 @@ def Station(st):
     tr = st[0]
 
     return tr.stats.station
+
+def Time(st):
+
+    print
 
