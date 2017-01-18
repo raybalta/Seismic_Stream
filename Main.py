@@ -28,3 +28,5 @@ size = (800,600)
 #Plotting.three_channel_Plot(st1, st2, st3, size)
 #Plotting.Whole_Day_Plot(st1)
 #print Access_Client.Client_Name("Iris")
+#Access_Client.URl_Map()
+Access_Client.Get_Wavefronts("IRIS","2015-02-12","IU","ANMO","LHZ",60, 60)# 60*30 60 secs by 30 min
