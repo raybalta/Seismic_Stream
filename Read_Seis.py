@@ -24,7 +24,7 @@ def Station(st):
 
     return tr.stats.station
 
-def Time(st):
 
-    print
+
+
 
