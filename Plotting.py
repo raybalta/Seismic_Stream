@@ -15,7 +15,7 @@ def Pretty_Plot(st, col, ticks, time):
 
     return dt
 
-def Save_file(m, filename):## pass method call- single file or multi file
+def Save_file(m, filename):## pass method call- single file or multi file, not yet tested if it works
     Channel.m(outfile = filename.png)
 
 def three_channel_Plot( st1, st2, st3,size):
