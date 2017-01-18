@@ -3,6 +3,7 @@ from obspy.core import UTCDateTime
 from obspy.clients.fdsn import Client
 
 
+
 import Read_Seis
 import Access_Data
 import Channel
@@ -15,7 +16,7 @@ st2 = read('https://examples.obspy.org/COP.BHN.DK.2009.050')
 st3 = read('https://examples.obspy.org/COP.BHZ.DK.2009.050')
 size = (800,600)
 
-#print Test.Hello()
+
 #print Read_Seis.Read(st)
 #print Read_Seis.Stats(st)
 #print Read_Seis.Station(st)
@@ -29,4 +30,5 @@ size = (800,600)
 #Plotting.Whole_Day_Plot(st1)
 #print Access_Client.Client_Name("Iris")
 #Access_Client.URl_Map()
-Access_Client.Get_Wavefronts("IRIS","2015-02-12","IU","ANMO","LHZ",60, 60)# 60*30 60 secs by 30 min
+#Access_Client.Get_Wavefronts("IRIS","2015-02-12","IU","ANMO","LHZ",60, 60)# 60*30 60 secs by 30 min
+Access_Client.Get_Events("2002-01-01", "2002-01-02", "IRIS", 5, "ISC")
