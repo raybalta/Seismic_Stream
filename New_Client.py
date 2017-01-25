@@ -19,7 +19,7 @@ def handle_data(trace):
 
    #trace.spectrogram(log=True)
 
-   #trace.plot()
+   trace.plot()
 
 
 client = create_client('rtserve.iris.washington.edu:18000/#IU_ANMO:BH?', on_data=handle_data)
