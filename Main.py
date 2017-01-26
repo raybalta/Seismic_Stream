@@ -9,6 +9,7 @@ import Access_Data
 import Channel
 import Plotting
 import Access_Client
+import New_Client
 
 st = read('http://examples.obspy.org/RJOB_061005_072159.ehz.new')
 st1 = read('https://examples.obspy.org/COP.BHE.DK.2009.050')
@@ -29,6 +30,7 @@ size = (800,600)
 #Plotting.three_channel_Plot(st1, st2, st3, size)
 #Plotting.Whole_Day_Plot(st1)
 #print Access_Client.Client_Name("Iris")
-#Access_Client.URl_Map()
+Access_Client.URl_Map()
 #Access_Client.Get_Wavefronts("IRIS","2015-02-12","IU","ANMO","LHZ",60, 60)# 60*30 60 secs by 30 min
-Access_Client.Get_Events("20017-01-01", "2017-01-02", "IRIS", 5, "ISC")
+#Access_Client.Get_Events("20017-01-01", "2017-01-02", "IRIS", 5, "ISC")
+#New_Client.New_Client("rtserve.iris.washington.edu:18000/#IU_ANMO:BH?","IU", "ANMO", "BH?")

@@ -32,7 +32,7 @@ print ("1")
 #sc = SparkContext(conf=conf)
 
 
-sc = SparkContext("local[4]", "NetworkWordCount")
+sc = SparkContext(appName="NetworkWordCount")
 #sc = SparkContext(appName="PythonStreamingNetworkWordCount")
 ssc = StreamingContext(sc, 1)##connects the sc evey 1 secs
 print (" Hello World")

@@ -15,20 +15,29 @@ def handle_data(trace):
    print(trace)
    print trace.data
    #print()
+   stream = read(trace)
+   stream.write('outfile.ascii', format= 'SLIST')
 
 
    #trace.spectrogram(log=True)
 
-   trace.plot()
+   #trace.plot()
 
 
-client = create_client('rtserve.iris.washington.edu:18000/#IU_ANMO:BH?', on_data=handle_data)
 
-print client.get_info('ID')
-print client.capabilities
+#client = create_client('rtserve.iris.washington.edu:18000/#IU_ANMO:BH?', on_data=handle_data)
+
+#print client.get_info('ID')
+#print client.capabilities
 
 ##stream data from the server
 
-client.select_stream('IU', 'ANMO', 'BH?')
+#client.select_stream('IU', 'ANMO', 'BH?')
 
-client.run()
+#client.run()
+
+def New_Client(cl, cl1, cl2, cl3):
+   client = create_client(cl, on_data=handle_data)
+   client.select_stream(cl1, cl2, cl3)
+
+   client.run()
