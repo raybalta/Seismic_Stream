@@ -17,6 +17,7 @@ def Get_Wavefronts(client,date,SN, Ch, Ch2, timerange, timerange2): ##client is 
     t = UTCDateTime(date)
     st = Client_Name(client).get_waveforms(SN, Ch, "00", Ch2, t, t + timerange* timerange2 )
     st.plot()
+    print st
 
 ## gets catalog
 
